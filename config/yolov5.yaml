@@ -1,0 +1,21 @@
+####################################
+## YoloV5模型卡片识别20类 配置文件
+####################################
+# YoloV5模型权重路径
+weight:  "weights/nut_and_screw_yolov5n.pt"
+# 输入图像的尺寸
+input_size: 640
+# 类别个数
+class_num:  2
+# 标签名称
+class_name:  ["nut", "screw"]
+# 标签类的中文名称
+class_name_cn: ["螺母", "螺丝"]
+# 阈值设置
+threshold:
+  iou: 0.8
+  confidence: 0.6
+# 计算设备
+# - cpu
+# - 0 <- 使用GPU
+device: 'cpu'
