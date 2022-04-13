@@ -96,6 +96,31 @@ model = YoloV5(yolov5_yaml_path='config/yolov5.yaml')
 canvas, class_id_list, xyxy_list, conf_list  = model.detect(img)
 ```
 
+* `canvas` : 画布
+
+  在原图的基础上绘制矩形框，类别，置信度。
+
+* `class_id_list`:   检测到的类别ID列表
+
+* `xyxy_list`: 检测到物体矩形框的列表
+
+  矩形框的格式为$[x_1, y_1, x_2, y_2]$ , 其中$(x_1, y_1)$ 是矩形框左上角的点坐标， $(x_2, y_2)$ 是右下角的坐标。  
+
+  求解物体矩形框中心点的坐标的公式为:
+  $$
+  cx = \frac{x_1 + x_2}{2}
+  $$
+
+  $$
+  cy = \frac{y_1 + y_2}{2}
+  $$
+
+* `conf_list`: 置信度列表
+
+
+
+
+
 ## 联系阿凯
 
 作者: 阿凯爱玩机器人
